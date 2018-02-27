@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Maria Diakova](https://up.htmlacademy.ru/htmlcss/20/user/256807).
-* Наставник: `Неизвестно`.
+* Наставник: [Влад Антипенко](https://htmlacademy.ru/profile/id158021).
 
 ---
 
