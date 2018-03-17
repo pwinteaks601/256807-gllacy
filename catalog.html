@@ -5,18 +5,19 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header_logo" href="index.html">
           <img src="img/index-logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
         </a>
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a>
+          <li><a class="site-navigation_current" href="catalog.html">Каталог</a>
             <ul class="submenu-navigation">
               <li><a href="#">Новинки</a></li>
-              <li class="site-navigation_current"><a href="catalog.html">Сливочное</a></li>
+              <li class="submenu-navigation_current"><a href="catalog.html">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
               <li><a href="#">Мелорин</a></li>
@@ -49,7 +50,7 @@
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Сортировка:</legend>
-            <select class="filter_sort" id="filter-sort" name="sort">
+            <select class="filter-input filter_sort" id="filter-sort" name="sort">
               <option value="popular-first">по популярности</option>
               <option value="cheap-first">сначала недорогие</option>
               <option value="expensive-first">сначала дорогие</option>
@@ -58,51 +59,51 @@
           </fieldset>
           <fieldset>
             <legend>Цена:</legend>
-            <input class="filter_price" id="filter-price" name="price" type="range" min="0" max="800" step="100">
+            <input class="filter-input filter_price" id="filter-price" name="price" type="range" min="0" max="800" step="100">
             <label for="filter-price" class="visually-hidden">Ценовой диапазон</label>
           </fieldset>
           <fieldset>
             <legend>Жирность:</legend>
-            <ul>
+            <ul class="filter-input">
               <li class="filter-option">
-                <input class="filter-input filter-input_radio visually-hidden" type="radio" name="fat-content" value="0" id="0-fat">
+                <input class="filter-input_radio visually-hidden" type="radio" name="fat-content" value="0" id="0-fat">
                 <label for="0-fat">0%</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input_radio visually-hidden" type="radio" name="fat-content" value="less-10" id="less-10-fat" checked>
+                <input class="filter-input_radio visually-hidden" type="radio" name="fat-content" value="less-10" id="less-10-fat" checked>
                 <label for="less-10-fat">до 10%</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input_radio visually-hidden" type="radio" name="fat-content" value="less-30" id="less-30-fat">
+                <input class="filter-input_radio visually-hidden" type="radio" name="fat-content" value="less-30" id="less-30-fat">
                 <label for="less-30-fat">до 30%</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input_radio visually-hidden" type="radio" name="fat-content" value="more-30" id="more-30-fat">
+                <input class="filter-input_radio visually-hidden" type="radio" name="fat-content" value="more-30" id="more-30-fat">
                 <label for="more-30-fat">выше 30%</label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Наполнители:</legend>
-            <ul>
+            <ul class="filter-input">
               <li class="filter-option">
-                <input class="filter-input filter-input_checkbox visually-hidden" type="checkbox" name="chocolate" id="filter-chocolate" checked>
+                <input class="filter-input_checkbox visually-hidden" type="checkbox" name="chocolate" id="filter-chocolate" checked>
                 <label for="filter-chocolate">шоколадные</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input_checkbox visually-hidden" type="checkbox" name="sugar" id="filter-sugar" checked>
+                <input class="filter-input_checkbox visually-hidden" type="checkbox" name="sugar" id="filter-sugar" checked>
                 <label for="filter-sugar">сахарные присыпки</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input_checkbox visually-hidden" type="checkbox" name="fruit" id="filter-fruit">
+                <input class="filter-input_checkbox visually-hidden" type="checkbox" name="fruit" id="filter-fruit">
                 <label for="filter-fruit">фрукты</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input_checkbox visually-hidden" type="checkbox" name="syrup" id="filter-syrup">
+                <input class="filter-input_checkbox visually-hidden" type="checkbox" name="syrup" id="filter-syrup">
                 <label for="filter-syrup">сиропы</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input_checkbox visually-hidden" type="checkbox" name="jam" id="filter-jam">
+                <input class="filter-input_checkbox visually-hidden" type="checkbox" name="jam" id="filter-jam">
                 <label for="filter-jam">джемы</label>
               </li>
             </ul>
@@ -114,11 +115,16 @@
         <h2 class="visually-hidden">Список сливочного мороженого</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <img class="catalog-item_img" src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <p>310 ₽<span>/кг</span></p>
-            <!-- В скринкасте название товара (ниже) сделали через сслыку, обернутую в h3. Обязательно оборачивать или можно просто ссылку оставить? -->
-            <a class="catalog-item_name" href="catalog.html/product-1">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-            <button class="item-button button visually-hidden" type="button">Быстрый просмотр</button>
+
+<!-- Ниже пыталась обернуть карточку товара в ссылку, чтобы добавить ей ховер. Но не получилось) Я так понимаю, это нужно будет как-то иначе сделать? -->
+
+            <!-- <a class="catalog-item_card" href="catalog.html/product-1"> -->
+              <img class="catalog-item_img" src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <p>310 ₽<span>/кг</span></p>
+              <!-- В скринкасте название товара (ниже) сделали через сслыку, обернутую в h3. Обязательно оборачивать или можно просто ссылку оставить? -->
+              <a class="catalog-item_name" href="catalog.html/product-1">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              <button class="item-button button visually-hidden" type="button">Быстрый просмотр</button>
+            <!-- </a> -->
           </li>
           <li class="catalog-item">
             <img class="catalog-item_img" src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
@@ -193,7 +199,7 @@
       <nav class="pagination">
         <h2 class="visually-hidden">Страницы каталога</h2>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item_inactive"><a href="#">Предыдущая страница</a></li>
+          <li class="pagination-item pagination-item_inactive"><a>Предыдущая страница</a></li>
           <li class="pagination-item pagination-item_current"><a>1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
