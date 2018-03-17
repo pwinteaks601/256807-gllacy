@@ -524,6 +524,12 @@ a.footer-menu-item {
   font-weight: 400;
 }
 
+a.footer-menu-item:hover, a.footer-menu-item:active  {
+  color: #ffbc9e;
+}
+
+
+
 /* Не получается выделить этот пункт жирным через :first-child. Не понимаю, как в данном случае правильно селекторы прописать.  */
 
 a.footer-menu_supplier {
@@ -538,6 +544,10 @@ p.footer-copyright {
 
 .footer-copyright a {
   color: #ffffff;
+}
+
+.footer-copyright a:hover, .footer-copyright a:active {
+  color: #ffbc9e;
 }
 
 /* Модалки */
