@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -11,7 +14,7 @@
         <ul class="site-navigation">
           <li><a href="catalog.html">Каталог</a>
             <ul class="submenu-navigation">
-              <li><a href="#">Новинки</a></li>
+              <li class="submenu-navigation-new"><a href="#">Новинки</a></li>
               <li><a href="catalog.html">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
               <li><a href="#">Фруктовый лед</a></li>
@@ -27,15 +30,36 @@
           <li class="cart"><a href="#" aria-label="Корзина">Пусто</a></li>
         </ul>
       </nav>
-      <div class="header-contacts" aria-label="Время работы">
-      <p>С 10 до 20, ежедневно<a class="header-phone" href="tel:+88124502525">8 812 450-25-25</a></p>
-      </div>
+      <p class="header-contacts" aria-label="Время работы">
+        С 10 до 20, ежедневно<br>
+        <a class="header-phone" href="tel:+88124502525">8 812 450-25-25</a>
+      </p>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Gllacy Shop</h1>
-      <section class="slider">
-        <h2 class="visually-hidden">Слайдер</h2>
+      <section class="top-items">
+        <h2 class="visually-hidden">Самые популярные товары</h2>
         <!-- Здесь будет слайдер -->
+        <p class="slider_name">Крем-брюле и пломбир<br> с малиновым джемом</p>
+        <a class="button slider_button" href="catalog.html">Давайте оба!</a>
+        <ul class="slides-switches">
+          <li class="slide-radio">
+            <button class="slide-btn">
+              Первый слайд
+            </button>
+          </li>
+          <li class="slide-radio">
+            <button class="slide-btn">
+              Второй слайд
+            </button>
+          </li>
+          <li class="slide-radio">
+            <button class="slide-btn">
+              Третий слайд
+            </button>
+          </li>
+        </ul>
+
       </section>
       <section class="special-offer">
         <h2 class="visually-hidden">Специальные предложения</h2>
@@ -115,10 +139,10 @@
           <img src="img/map.jpg" width="1200" height="430" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         </div>
         <div class="contacts-block">
-          <p>Адрес главного офиса и офлайн-магазина:<br>
+          <p>Адрес главного офиса<br> и офлайн-магазина:<br>
             <span class="contacts-info">ул. Большая Конюшенная 19/8, Санкт-Петербург</span><br>
             Для заказов по телефону:<br>
-            <span class="contacts-info">8 812 450-25-25</span><br>
+            <span><a class="contacts-info" href="tel:+88124502525">8 812 450-25-25</a></span><br>
             (с 10 до 20 ежедневно)
           </p>
           <a class="button" href="feedback.html">Форма обратной связи</a>
@@ -133,7 +157,7 @@
         <li><a class="social-button" href="#">Вконтакте</a></li>
       </ul>
       <ul class="footer-menu">
-        <li><a class="footer-menu-item" href="#">Для поставщиков</a></li>
+        <li><a class="footer-menu-item footer-menu_supplier" href="#">Для поставщиков</a></li>
         <li><a class="footer-menu-item" href="#">О производстве </a></li>
         <li><a class="footer-menu-item" href="#">Наши документы</a></li>
         <li><a class="footer-menu-item" href="#">Экологические стандарты</a></li>
@@ -192,7 +216,7 @@
     <label class="visually-hidden" for="user-password">Пароль</label>
   </p>
   <p class="login-password-info">
-    <a class="restore" href="#">Забыли пароль?</a>
+    <a class="restore" href="#">Забыли пароль?</a><br>
     <a class="registration" href="#">Новая регистрация</a>
   </p>
   <button class="login-button button" type="submit">Войти</button>

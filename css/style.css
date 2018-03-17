@@ -1,0 +1,474 @@
+body {
+  margin: 0;
+  padding:0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+
+  background-color: #849d8f;
+  background-image: url("../img/slider-1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  vertical-align: middle;
+  text-align: center;
+
+  background-color: #f26743;
+  border: none;
+}
+
+.button:hover {
+  color:#fefefe;
+
+  background-color: #f58669;
+}
+
+.button:active {
+  color:#fceeec;
+
+  background-color: #d84732;
+}
+
+/* Футер */
+
+
+.site-navigation, .user-navigation, .submenu-navigation {
+  list-style: none;
+}
+
+.site-navigation a, .user-navigation a {
+  color: #ffffff;
+}
+
+.site-navigation {
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.site-navigation a:hover {
+  color: #333333;
+
+  background-color: #f7f6f3;
+}
+
+.site-navigation a:active {
+  color: #333333;
+
+  background-color: #ededed;
+}
+
+.user-navigation {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.user-navigation a {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.user-navigation a:hover {
+  color: #323232;
+
+  background-color: #f8f7f4;
+}
+
+.submenu-navigation {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.submenu-navigation-new {
+  font-weight: 700;
+}
+
+.submenu-navigation a {
+  color: #323232;
+
+  background-color: #f8f7f4;
+}
+
+.submenu-navigation a:hover {
+  background-color: #fbded7;
+}
+
+.submenu-navigation a:active {
+  background-color: #f6b5a5;
+}
+
+.header-contacts {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.header-phone {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+a.header-phone {
+  color: #ffffff;
+}
+
+/* Слайдер */
+
+p.slider_name {
+  font-size: 60px;
+  line-height: 60.35px;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+a.slider_button {
+  font-size: 32px;
+  line-height: 44px;
+  text-shadow:
+    0 2px 5px rgba(160, 32, 11, 0.76);
+}
+
+a.slider_button:hover {
+  color:#ffffff;
+}
+
+ul.slides-switches {
+  list-style: none;
+}
+
+/* Специальные предложения */
+ul.special-offer-list {
+  list-style: none;
+}
+
+h3.special-offer-item_title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+p.special-offer-item_desc {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Фон пока оставить так, а потом скруглять рамки уже когда будем прописывать блоки? Или это нужно сделать сразу для фона? */
+
+.special-offer-item:first-child {
+  background-color: #9d0025;
+  background-image: url("../img/raspberry-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.special-offer-item {
+  background-color: #321d18;
+  background-image: url("../img/chocolate-background.jpg");
+  background-repeat: no-repeat;
+}
+
+/* Хиты */
+
+.hits-list {
+  list-style: none;
+}
+
+.hits-item p {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  text-shadow:
+    1px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.hits-item span {
+  font-size: 30px;
+}
+
+a.hits-item_name {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+a.hits-item_name:hover, a.hits-item_name:active {
+  color: #ffbc9e;
+}
+
+/* О нас  */
+.about {
+  background-color: #f1e4ca;
+  background-image: url("../img/waffle-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.about_headline {
+  font-size: 24px;
+  line-height: 30px;
+  color: #323232;
+}
+
+/* Стоит ли этот текст сразу разбить на колонки через column-count? */
+
+.about_info p {
+  font-weight: 400;
+  color: #323232;
+}
+
+/* Новости */
+
+.news {
+  background-color: #ffffff;
+  background-image: url("../img/blog-background.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.news_title {
+  font-weight: 400;
+  color: #323232;
+}
+
+a.news_link {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #323232;
+  text-decoration: underline;
+}
+
+a.news_link:hover, a.news_link:active {
+  color: #e84d37;
+}
+
+/* Рассылка */
+
+.subscribe {
+  background-color: #f8f7f4;
+}
+
+.subsribe-info {
+  font-weight: 400;
+  color: #5a5a5a;
+}
+
+.subscribe-form input[type="email"] {
+  color: #323232;
+  font-weight: 700;
+
+  background-color: #ffffff;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+}
+
+/* По макету надо поменять цвет текста в placeholder. Нашла в интернете эти варианты. Нормально? */
+
+.subscribe-form input[type="email"]::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.subscribe-form input[type="email"]::-moz-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.subscribe-form input[type="email"]:hover{
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.subscribe-form input[type="email"]:focus{
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+/* Контакты */
+
+.contacts {
+  background-color: #ece5c8;
+}
+
+.contacts-block {
+  background-color: #ffffff;
+}
+
+.contacts-block p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #323232;
+}
+
+.contacts-block span {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+a.contacts-info {
+  color: #323232;
+}
+
+/* Футер */
+
+ul.footer-social {
+  list-style: none;
+}
+
+a.social-button {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+ul.footer-menu {
+  list-style: none;
+}
+
+/* Стоит ли этот текст сразу разбить на колонки через column-count? */
+
+a.footer-menu-item {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+/* Не получается выделить этот пункт жирным через :first-child. Не понимаю, как в данном случае правильно селекторы прописать.  */
+
+a.footer-menu_supplier {
+  font-weight: 700;
+}
+
+p.footer-copyright {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.footer-copyright a {
+  color: #ffffff;
+}
+
+/* Модалки */
+
+/* Фидбэк */
+.modal h2 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #323232;
+}
+
+.modal-feedback {
+  background-color: #f8f7f4;
+}
+
+.feedback-form input[type="email"], .feedback-form input[type="text"], .feedback-form textarea {
+  color: #323232;
+  font-weight: 700;
+
+  background-color: #ffffff;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+}
+
+.feedback-form input[type="email"]::-webkit-input-placeholder, .feedback-form input[type="text"]::-webkit-input-placeholder, .feedback-form textarea::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.feedback-form input[type="email"]::-moz-placeholder, .feedback-form input[type="text"]::-moz-placeholder, .feedback-form textarea::-moz-placeholder  {
+  color: #999999;
+  font-weight: 400;
+}
+
+.feedback-form input[type="email"]:hover, .feedback-form input[type="text"]:hover, .feedback-form textarea:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.feedback-form input[type="email"]:focus, .feedback-form input[type="text"]:focus, .feedback-form textarea:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+/* Поиск */
+.modal-search {
+  background-color: #f8f7f4;
+}
+
+.search-form input[type="search"] {
+  color: #323232;
+  font-weight: 700;
+
+  background-color: #ffffff;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+}
+
+.search-form input[type="search"]::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-form input[type="search"]::-moz-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.search-form input[type="search"]:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.search-form input[type="search"]:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+/* Вход */
+
+.modal-login {
+  background-color: #f8f7f4;
+}
+
+.login-form input[type="email"], .login-form input[type="email"] {
+  color: #323232;
+  font-weight: 700;
+
+  background-color: #ffffff;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+}
+
+.login-form input[type="email"]::-webkit-input-placeholder, .login-form input[type="password"]::-webkit-input-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.login-form input[type="email"]::-moz-placeholder, .login-form input[type="password"]::-moz-placeholder {
+  color: #999999;
+  font-weight: 400;
+}
+
+.login-form input[type="email"]:hover, .login-form input[type="password"]:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.login-form input[type="email"]:focus, .login-form input[type="password"]:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
+.login-password-info a {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #323232;
+}
