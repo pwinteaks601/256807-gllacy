@@ -794,6 +794,7 @@ div.main-header_logo {
   margin-bottom: 40px;
 }
 
+
 .special-offer-list {
 
   padding: 0;
@@ -817,4 +818,17 @@ div.main-header_logo {
 
 .special-offer-item:first-child {
   margin-right: 26px;
+}
+
+.hits-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.hits-item {
+  width: 267px;
 }
