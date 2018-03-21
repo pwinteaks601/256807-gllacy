@@ -28,19 +28,23 @@ a {
   color: #ffffff;
   vertical-align: middle;
   text-align: center;
+  padding: 10px 22px;
+
 
   background-image: linear-gradient(to top, #ca3824, #f26843);
   box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
   border: none;
+  border-radius: 25px;
 }
 
-.button:hover {
+.button:hover, .button:focus {
   color:#fefefe;
 
   background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow:
   0 1px 2px 0 #ac1000,
   inset 0 0 30px rgba(255, 255, 255, 0.2);
+  outline: none;
 }
 
 .button:active {
@@ -50,6 +54,14 @@ a {
   box-shadow: inset
   0 2px 2px 0 #942718,
   inset 0 0 30px rgba(0, 0, 0, 0.07);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /* Хедер */
@@ -71,11 +83,14 @@ a {
 .site-navigation a {
   text-decoration: underline;
   text-decoration-color: rgba(255,255,255,0.2);
+  padding: 7px 14px;
+  border-radius: 20px;
 }
 
-.site-navigation a:hover {
+.site-navigation a:hover, .site-navigation a:focus {
   color: #333333;
   text-decoration: none;
+  outline: none;
 
   background-color: #f7f6f3;
 }
@@ -103,10 +118,13 @@ a.site-navigation_current {
 
 .user-navigation a {
   background-color: rgba(255,255,255,0.2);
+  padding: 7px 14px;
+  border-radius: 20px;
 }
 
-.user-navigation a:hover {
+.user-navigation a:hover, .user-navigation a:focus {
   color: #323232;
+  outline: none;
 
   background-color: #f8f7f4;
 }
@@ -139,8 +157,9 @@ a.site-navigation_current {
   background-color: #f8f7f4;
 }
 
-.submenu-navigation a:hover {
+.submenu-navigation a:hover, .submenu-navigation a:focus {
   background-color: #fbded7;
+  outline: none;
 }
 
 .submenu-navigation a:active {
@@ -179,10 +198,11 @@ ul.breadcrumbs {
   text-decoration-color: rgba(255,255,255,0.2);
 }
 
-.breadcrumbs a:hover, .breadcrumbs a:active {
+.breadcrumbs a:hover, .breadcrumbs a:active, .breadcrumbs a:focus {
   color: #ffbc9e;
   text-decoration: underline;
   text-decoration-color: rgba(255,188,158,0.2);
+  outline: none;
 }
 
 .breadcrumbs_current {
@@ -217,13 +237,17 @@ h2.page-title {
 
 .filter-input {
   background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 5px 15px;
   font-size: 16px;
   line-height: 18px;
+  font-weight: 500;
   color: #ffffff;
 }
 
-.filter_sort:hover {
+.filter_sort:hover, .filter_sort:focus {
   color: #323232;
+  outline: none;
 }
 
 .filter_sort option {
@@ -242,14 +266,18 @@ h2.page-title {
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid #ffffff;
   box-shadow: none;
+  padding: 0;
+  margin: 0;
+  padding: 9px 30px;
 }
 
-.filter-button:hover {
+.filter-button:hover, .filter-button:focus {
   color: #323232;
 
   background-image: none;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: none;
+  outline:none;
 }
 
 .filter-button:active {
@@ -259,6 +287,7 @@ h2.page-title {
   background-color: #ededed;
   border: 2px solid #ffffff;
   box-shadow: inset 0 2px 1px 0 #696969;
+  outline: none;
 }
 
 /* Слайдер */
@@ -276,14 +305,17 @@ a.slider_button {
   line-height: 44px;
   text-shadow:
     0 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 20px 42px;
 
   background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+  border-radius: 40px;
 }
 
-a.slider_button:hover {
+a.slider_button:hover, a.slider_button:focus {
   box-shadow:
     0 2px 2px 0 #ac1000;
+    outline: none;
 }
 
 ul.slides-switches {
@@ -299,35 +331,41 @@ h3.special-offer-item_title {
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
+  padding: 0;
+  margin: 0;
 }
 
 p.special-offer-item_desc {
   font-size: 18px;
   font-weight: 700;
+  margin-bottom: 50px;
 }
 
-/* Фон пока оставить так, а потом скруглять рамки уже когда будем прописывать блоки? Или это нужно сделать сразу для фона? */
+.special-offer-item a {
+  display: inline-block;
+}
 
 .special-offer-item:first-child {
   background-color: #9d0025;
   background-image: url("../img/raspberry-background.jpg");
-  background-repeat: no-repeat;
-  background-size: 560px auto cover;
-  border-radius: 12px 12px 12px 12px;
 }
 
 .special-offer-item {
   background-color: #321d18;
   background-image: url("../img/chocolate-background.jpg");
   background-repeat: no-repeat;
-  background-size: 560px auto cover;
-  border-radius: 12px 12px 12px 12px;
+  background-size: cover;
+  border-radius: 15px;
 }
 
 /* Хиты */
 
 .hits-list {
   list-style: none;
+}
+
+.hits-item_img, .catalog-item_img {
+  border-radius: 50%;
 }
 
 a.hits-item_name {
@@ -339,10 +377,11 @@ a.hits-item_name {
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
-a.hits-item_name:hover, a.hits-item_name:active {
+a.hits-item_name:hover, a.hits-item_name:active, a.hits-item_name:focus {
   color: #ffbc9e;
   color: #ffbc9e;
   text-decoration-color: rgba(255, 188, 158, 0.2);
+  outline: none;
 }
 
 /* Товары в каталоге */
@@ -360,9 +399,10 @@ a.catalog-item_name {
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
-a.catalog-item_name:hover, a.catalog-item_name:active {
+a.catalog-item_name:hover, a.catalog-item_name:active, a.catalog-item_name:focus {
   color: #ffbc9e;
   text-decoration-color: rgba(255, 188, 158, 0.2);
+  outline: none;
 }
 
 .catalog-item p {
@@ -377,29 +417,23 @@ a.catalog-item_name:hover, a.catalog-item_name:active {
   font-size: 30px;
 }
 
-/* Ниже пыталась обернуть карточку товара в ссылку, чтобы добавить ей ховер. Но не получилось) Я так понимаю, это нужно будет как-то иначе сделать? */
-
-/* a.catalog-item_card:hover {
-  background-color: rgba(248, 247, 244, 0.2);
-  box-shadow:
-  0 20px 20px 0 rgba(0, 0, 0, 0.4);
-} */
-
 
 /* О нас  */
-.about {
+.about_content {
   background-color: #f1e4ca;
   background-image: url("../img/waffle-background.jpg");
-  background-repeat: no-repeat;
+  background-repeat: round;
+  border-radius: 23px;
 }
 
 .about_headline {
   font-size: 24px;
   line-height: 30px;
   color: #323232;
+  padding: 20px;
+  margin: 0;
 }
 
-/* Стоит ли этот текст сразу разбить на колонки через column-count? */
 
 .about_info p {
   font-weight: 400;
@@ -412,13 +446,13 @@ a.catalog-item_name:hover, a.catalog-item_name:active {
   background-color: #ffffff;
   background-image: url("../img/blog-background.jpg");
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: 18% 39%;
 }
 
 .news_title {
-  font-weight: 400;
   color: #323232;
 }
+
 
 a.news_link {
   font-size: 24px;
@@ -428,8 +462,9 @@ a.news_link {
   text-decoration: underline;
 }
 
-a.news_link:hover, a.news_link:active {
+a.news_link:hover, a.news_link:active, a.news_link:focus {
   color: #e84d37;
+  outline: none;
 }
 
 /* Рассылка */
@@ -446,9 +481,13 @@ a.news_link:hover, a.news_link:active {
 .subscribe-form input[type="email"] {
   color: #323232;
   font-weight: 700;
+  padding: 12px;
+  border-radius: 5px;
+  width: 90%;
 
   background-color: #ffffff;
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
+  border: none;
 }
 
 /* По макету надо поменять цвет текста в placeholder. Нашла в интернете эти варианты. Нормально? */
@@ -464,11 +503,12 @@ a.news_link:hover, a.news_link:active {
 }
 
 .subscribe-form input[type="email"]:hover{
-  border: 2px solid rgba(154, 154, 154, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .subscribe-form input[type="email"]:focus{
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
+  outline: none;
 }
 
 /* Контакты */
@@ -507,10 +547,13 @@ ul.pagination-list {
 .pagination-item a {
   line-height: 18px;
   color: #ffffff;
+  border-radius: 50%;
+  padding: 4px 9px;
 }
 
-.pagination-item a:hover {
+.pagination-item a:hover, .pagination-item a:focus {
   background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
 }
 
 .pagination-item a:active {
@@ -561,20 +604,21 @@ a.footer-menu-item {
   text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
-a.footer-menu-item:hover, a.footer-menu-item:active  {
+a.footer-menu-item:hover, a.footer-menu-item:active, a.footer-menu-item:focus  {
   color: #ffbc9e;
   text-decoration-color: rgba(255, 188, 158, 0.2);
+  outline: none;
 }
 
 
 
 /* Не получается выделить этот пункт жирным через :first-child. Не понимаю, как в данном случае правильно селекторы прописать.  */
 
-a.footer-menu_supplier {
+.footer-menu_content li:first-child {
   font-weight: 700;
 }
 
-p.footer-copyright {
+.footer-copyright p {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -584,8 +628,9 @@ p.footer-copyright {
   color: #ffffff;
 }
 
-.footer-copyright a:hover, .footer-copyright a:active {
+.footer-copyright a:hover, .footer-copyright a:active, .footer-copyright a:focus {
   color: #ffbc9e;
+  outline: none;
 }
 
 /* Модалки */
@@ -604,9 +649,11 @@ p.footer-copyright {
 .feedback-form input[type="email"], .feedback-form input[type="text"], .feedback-form textarea {
   color: #323232;
   font-weight: 700;
+  border-radius: 5px;
 
   background-color: #ffffff;
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
+  border: none;
 }
 
 .feedback-form input[type="email"]::-webkit-input-placeholder, .feedback-form input[type="text"]::-webkit-input-placeholder, .feedback-form textarea::-webkit-input-placeholder {
@@ -620,11 +667,12 @@ p.footer-copyright {
 }
 
 .feedback-form input[type="email"]:hover, .feedback-form input[type="text"]:hover, .feedback-form textarea:hover {
-  border: 2px solid rgba(154, 154, 154, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .feedback-form input[type="email"]:focus, .feedback-form input[type="text"]:focus, .feedback-form textarea:focus {
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
+  outline: none;
 }
 
 /* Поиск */
@@ -635,9 +683,11 @@ p.footer-copyright {
 .search-form input[type="search"] {
   color: #323232;
   font-weight: 700;
+  border-radius: 5px;
 
   background-color: #ffffff;
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
+  border: none;
 }
 
 .search-form input[type="search"]::-webkit-input-placeholder {
@@ -651,11 +701,12 @@ p.footer-copyright {
 }
 
 .search-form input[type="search"]:hover {
-  border: 2px solid rgba(154, 154, 154, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .search-form input[type="search"]:focus {
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
+  outline: none;
 }
 
 /* Вход */
@@ -664,12 +715,14 @@ p.footer-copyright {
   background-color: #f8f7f4;
 }
 
-.login-form input[type="email"], .login-form input[type="email"] {
+.login-form input[type="email"], .login-form input[type="password"] {
   color: #323232;
   font-weight: 700;
+  border-radius: 5px;
 
   background-color: #ffffff;
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  box-shadow: inset 0 0 0 1px rgba(178, 178, 178, 0.52);
+  border: none;
 }
 
 .login-form input[type="email"]::-webkit-input-placeholder, .login-form input[type="password"]::-webkit-input-placeholder {
@@ -683,11 +736,12 @@ p.footer-copyright {
 }
 
 .login-form input[type="email"]:hover, .login-form input[type="password"]:hover {
-  border: 2px solid rgba(154, 154, 154, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(154, 154, 154, 0.52);
 }
 
 .login-form input[type="email"]:focus, .login-form input[type="password"]:focus {
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.52);
+  outline: none;
 }
 
 .login-password-info a {
@@ -737,24 +791,26 @@ ul.modal-cart-list {
 
 .main-header {
   width: 100%;
+  margin-bottom: 0px;
+}
+
+.main-page .main-header {
   margin-bottom: 100px;
 }
 
 .container {
   width: 1146px;
   margin: 0 auto;
-  padding: 0 27px;
-  padding-top: 10px;
-
+  padding: 0 2.3%;
 }
 
 
 .main-navigation {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-
+  padding-top: 10px;
 }
 
 
@@ -764,29 +820,38 @@ div.main-header_logo {
 }
 
 .site-navigation {
-  width: 695px;
+  display: flex;
   margin: 0;
   padding: 0;
 
   list-style: none;
-
 }
 
+.site-navigation li {
+  margin-left: 5px;
+}
+
+
 .user-navigation {
-  width: 270px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   margin-left: auto;
 
   list-style: none;
 
+}
+
+.user-navigation li {
+  margin-left: 20px;
 }
 
 .header-contacts {
-  width: 170px;
+  width: 100%;
   margin: 0;
   padding: 0;
-  margin-left: auto;
 }
 
 .top-items {
@@ -796,7 +861,6 @@ div.main-header_logo {
 
 
 .special-offer-list {
-
   padding: 0;
   margin:0;
   margin-bottom: 40px;
@@ -808,27 +872,275 @@ div.main-header_logo {
 .special-offer-item {
   margin: 0;
   padding: 0;
-  width: 560px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-
+  width: 48.8%;
 }
 
-.special-offer-item:first-child {
-  margin-right: 26px;
+.special-offer_content {
+  padding: 20px;
+  margin: 0;
 }
 
-.hits-list {
+
+
+.hits-list, .catalog-list {
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
 }
 
+.hits-item, .catalog-item {
+  width: 23.4%;
+
+}
+
+.hits-item:hover, .catalog-item:hover, .hits-item:focus, .catalog-item:focus {
+  background-color: rgba(248, 247, 244, 0.2);
+  padding: 5px 13px 20px 13px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  height: 405px;
+  margin: 0;
+}
+
+.hits-item:hover .item-button, .catalog-item:hover .item-button, .hits-item:focus .item-button, .catalog-item:focus .item-button {
+  opacity: 1;
+}
+
+.item-button {
+  opacity: 0;
+}
+
+.catalog-item {
+  margin-bottom: 35px;
+}
+
 .hits-item {
-  width: 267px;
+  margin-bottom: 0;
+}
+
+.hits-item p, .catalog-item p {
+  margin: 0;
+}
+
+.hits-item h3, .catalog-item h3 {
+  margin: 0;
+  text-align: center;
+}
+
+
+
+
+.about {
+  margin-bottom: 40px;
+}
+
+.about_info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.about_info p{
+  width: 43%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+.news-subscription {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news, .subscribe {
+  width: 48.8%;
+  border-radius: 15px;
+}
+
+.news_content {
+  padding: 28px 250px 80px 20px;
+}
+
+.news_title {
+  margin: 0;
+}
+
+.subscribe {
+  margin: 5px;
+}
+
+.subscribe_content {
+  padding: 20px 25px 25px 20px;
+}
+
+.subscribe-form p {
+  display: inline-block;
+  width: 70%;
+  margin: 0;
+}
+
+.contacts {
+  position: relative;
+  width: 1200px;
+  margin: auto;
+}
+
+
+
+
+.contacts-block {
+  position: absolute;
+  width: 303px;
+  top: 63px;
+  right: 27px;
+
+  border-radius: 15px;
+}
+
+.contacts_content {
+  padding: 30px 30px 30px 30px;
+}
+
+.contacts_content p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.contacts_content a {
+  display: inline-block;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+a.contacts-info {
+  display: inline;
+  padding: 0;
+
+}
+
+.main-footer {
+  margin-top: 20px;
+  padding-left: 27px;
+  padding-right: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.footer-social li + li {
+  margin-left: 15px;
+}
+
+.footer-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.footer-menu li {
+  width: 34%;
+}
+
+
+.footer-menu li:first-child a {
+  font-weight: 700;
+}
+
+.footer-copyright {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.footer-copyright p {
+  margin: 0;
+}
+
+
+.breadcrumbs {
+  padding:0;
+  margin: 0;
+
+  display: flex;
+  align-items: baseline;
+}
+
+.breadcrumbs li + li{
+  margin-left: 10px;
+}
+
+.page-title {
+  margin-top: 0;
+}
+
+form.filter {
+  display: flex;
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  flex-wrap: wrap;
+  width: 75%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+form.filter legend {
+  margin-bottom: 5px;
+}
+
+form.filter fieldset {
+  padding: 0;
+  margin: 0;
+
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.filter_fat, .filter_topping {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  padding: 11px 25px;
+  margin: 0;
+  border-radius: 30px;
+}
+
+.filter_fat li {
+  margin-left: 35px;
+}
+
+.filter_topping li {
+  margin-left: 50px;
+}
+.filter_topping li:first-child {
+  margin-left: 30px;
+}
+
+
+.pagination-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-item {
+  margin-left: 2px;
 }
