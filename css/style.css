@@ -244,8 +244,9 @@ a.site-navigation_current {
   position: absolute;
   top: 30px;
   left: 0;
-
   display: none;
+
+
 
 }
 
@@ -263,12 +264,13 @@ a.site-navigation_current {
 
 .submenu-navigation-new {
   font-weight: 700;
-  padding-left: 6px;
-  padding-right: 9px;
+
   border-bottom: 1px solid rgba(53,53,53,0.2);
   padding-bottom: 11px;
 
 }
+
+
 
 .submenu-navigation a:hover, .submenu-navigation a:focus {
   background-color: #fbded7;
@@ -908,6 +910,11 @@ a.footer-menu-item:hover, a.footer-menu-item:active, a.footer-menu-item:focus  {
 
 /* Модалки */
 
+.modal {
+  display: none;
+}
+
+
 /* Фидбэк */
 .modal h2 {
   font-size: 24px;
@@ -921,11 +928,29 @@ a.footer-menu-item:hover, a.footer-menu-item:active, a.footer-menu-item:focus  {
   background-color: #f8f7f4;
   width: 428px;
   border-radius: 5px;
-  position: absolute;
   padding: 25px 25px 24px 24px;
   position: relative;
 
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  display: none;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -238.5px;
+  margin-top: -221.5px;
+
+  z-index: 2;
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3)
 
   display: none;
 }
@@ -941,6 +966,8 @@ a.footer-menu-item:hover, a.footer-menu-item:active, a.footer-menu-item:focus  {
   background-image: url("../img/cross-big.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+
+  cursor: pointer;
 }
 
 
@@ -1015,7 +1042,7 @@ a.footer-menu-item:hover, a.footer-menu-item:active, a.footer-menu-item:focus  {
 
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 
-  display: none;
+
 
 }
 
@@ -1066,7 +1093,7 @@ a.footer-menu-item:hover, a.footer-menu-item:active, a.footer-menu-item:focus  {
 
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 
-  display: none;
+
 }
 
 .login-form p {
@@ -1281,6 +1308,7 @@ div.main-header_logo {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
 }
 
 .hits-list {
@@ -1306,11 +1334,11 @@ div.main-header_logo {
 }
 
 .hits-item:hover .item-button, .catalog-item:hover .item-button, .hits-item:focus .item-button, .catalog-item:focus .item-button {
-  opacity: 1;
+  display: block
 }
 
 .item-button {
-  opacity: 0;
+  display: none;
 } */
 
 .catalog-item {
