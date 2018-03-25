@@ -689,6 +689,8 @@ p.special-offer-item_desc {
   background-repeat: no-repeat;
   background-position: 0 0;
 
+  z-index: 6;
+
 }
 
 .hits-item_img, .catalog-item_img {
@@ -1400,6 +1402,12 @@ div.main-header_logo {
   width: 23.2%;
 position: relative;
 
+
+}
+
+.item-content {
+  z-index: 5;
+  position: relative;
 }
 
 /* .hits-item:hover, .catalog-item:hover, .hits-item:focus, .catalog-item:focus {
@@ -1438,7 +1446,7 @@ position: relative;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   margin: 0;
-  z-index: 3;
+
   padding-left: 13px;
   padding-right: 13px;
   padding-top: 7px;
@@ -1450,7 +1458,9 @@ position: relative;
   left:-13px;
   top: -6px;
 
-  z-index: 1;
+z-index: 1;
+
+
 
   display: none;
 }
