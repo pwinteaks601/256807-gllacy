@@ -38,13 +38,17 @@ a {
   border-radius: 50px;
 }
 
-.button:hover, .button:focus {
+.button:hover  {
   color:#fefefe;
 
   background-image: linear-gradient(to top, #e74a35, #f26843);
   box-shadow:
   0 1px 2px 0 #ac1000,
   inset 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.button:focus {
+  box-shadow: 0 0 0 2px #2e88e4;
   outline: none;
 }
 
@@ -187,6 +191,18 @@ a.site-navigation_current {
   fill: #000000;
 }
 
+.login-link:hover .modal-login {
+  display: block;
+}
+
+.login-link:focus .modal-login {
+  display: block;
+}
+
+.modal-login {
+  display: none;
+}
+
 .cart a {
   position: relative;
   padding: 8px 34px 8px 45px;
@@ -207,6 +223,18 @@ a.site-navigation_current {
 .search a {
   position: relative;
   padding: 8px 16px;
+}
+
+.search:hover .modal-search {
+  display: block;
+}
+
+.search:focus .modal-search {
+  display: block;
+}
+
+.modal-search {
+  display:none;
 }
 
 .loupe {
@@ -236,21 +264,23 @@ a.site-navigation_current {
   padding: 0;
   margin: 0;
   border-radius: 5px;
-  padding-top: 11px;
-  padding-bottom: 13px;
+  /* padding-top: 11px;
+  padding-bottom: 13px; */
 
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 
   position: absolute;
   top: 30px;
   left: 0;
-  display: none;
-
-
+  /* display: none; */
 
 }
 
 .site-navigation > li:hover .submenu-navigation {
+  display: block;
+}
+
+.site-navigation > li:focus .submenu-navigation {
   display: block;
 }
 
@@ -262,12 +292,30 @@ a.site-navigation_current {
   border-radius: 0;
 }
 
+.submenu-navigation {
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  display: none;
+}
+
 .submenu-navigation-new {
   font-weight: 700;
 
-  border-bottom: 1px solid rgba(53,53,53,0.2);
-  padding-bottom: 11px;
+  padding-bottom: 10px;
 
+  position: relative;
+}
+
+.submenu-navigation-new::after {
+  content: "";
+  position: absolute;
+  top:30px;
+  left: 6px;
+  width: 128px;
+  height: 1px;
+
+  background-color: #353535;
 }
 
 
@@ -455,8 +503,13 @@ h2.page-title {
 .slider-list {
   margin: 0;
   padding: 0;
+  /* padding-top: 274px; */
 
   list-style: none;
+}
+
+.main-page .main-header {
+  margin-bottom: 275px;
 }
 
 .slide-title {
@@ -621,7 +674,7 @@ p.special-offer-item_desc {
 
 .hits-item p, .catalog-item p {
   position: absolute;
-  bottom: 66px;
+  top: 218px;
 }
 
 .hits-item::before {
@@ -697,7 +750,7 @@ a.catalog-item_name:hover, a.catalog-item_name:active, a.catalog-item_name:focus
   background-color: #f1e4ca;
   background-image: url("../img/waffle-background.jpg");
   background-repeat: round;
-  border-radius: 23px;
+  border-radius: 20px;
 }
 
 .about_headline {
@@ -720,7 +773,7 @@ a.catalog-item_name:hover, a.catalog-item_name:active, a.catalog-item_name:focus
   background-color: #ffffff;
   background-image: url("../img/blog-background.jpg");
   background-repeat: no-repeat;
-  background-position: 18% 39%;
+  background-position: 17% 39%;
 }
 
 .news_title {
@@ -875,7 +928,16 @@ ul.footer-menu {
   list-style: none;
 }
 
-/* Стоит ли этот текст сразу разбить на колонки через column-count? */
+.footer-menu li:nth-child(2n) {
+  margin-right:0px;
+}
+
+.footer-menu li:nth-child(2n+1) {
+  margin-right:-25px;
+  margin-left: 9px;
+}
+
+
 
 a.footer-menu-item {
   color: #ffffff;
@@ -894,7 +956,6 @@ a.footer-menu-item:hover, a.footer-menu-item:active, a.footer-menu-item:focus  {
 
 
 
-/* Не получается выделить этот пункт жирным через :first-child. Не понимаю, как в данном случае правильно селекторы прописать.  */
 
 .footer-menu_content li:first-child {
   font-weight: 700;
@@ -1213,11 +1274,10 @@ ul.modal-cart-list {
 .main-header {
   width: 100%;
   margin-bottom: 0px;
+
 }
 
-.main-page .main-header {
-  margin-bottom: 274px;
-}
+
 
 .main-header_logo {
   width: 154px;
@@ -1236,7 +1296,7 @@ ul.modal-cart-list {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 12px;
+  padding-top: 8px;
 }
 
 
@@ -1327,26 +1387,83 @@ div.main-header_logo {
 }
 
 .hits-item, .catalog-item {
-  width: 23.4%;
+  /* padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 7px;
+  padding-bottom: 80px;
+  max-width: 296px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+
+  max-height: 410px; */
+  width: 23.2%;
+position: relative;
+
 }
 
 /* .hits-item:hover, .catalog-item:hover, .hits-item:focus, .catalog-item:focus {
   background-color: rgba(248, 247, 244, 0.2);
-  padding: 5px 13px 20px 13px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   margin: 0;
   z-index: 3;
 
-}
+} */
 
-.hits-item:hover .item-button, .catalog-item:hover .item-button, .hits-item:focus .item-button, .catalog-item:focus .item-button {
-  display: block
-}
+/* .hits-item:hover .item-button, .catalog-item:hover .item-button, .hits-item:focus .item-button, .catalog-item:focus .item-button {
+  opacity: 1;
+  visibility: visible;
+  z-index: 3;
+
+} */
 
 .item-button {
+
+  display: inline-block;
+
+
+  position: absolute;
+  top: 339px;
+  left: 46px;
+}
+
+
+
+
+.item-hover {
+  width: 293px;
+  height: 405px;
+  background-color: rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  margin: 0;
+  z-index: 3;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 7px;
+  padding-bottom: 80px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  position: absolute;
+  left:-13px;
+  top: -6px;
+
+  z-index: 1;
+
   display: none;
-} */
+}
+
+li.hits-item:hover .item-hover {
+  display:block;
+
+}
+
+
+
+
+
 
 .catalog-item {
   margin-bottom: 36px;
@@ -1363,7 +1480,7 @@ div.main-header_logo {
 .hits-item h3, .catalog-item h3 {
   margin: 0;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 
@@ -1375,23 +1492,28 @@ div.main-header_logo {
 
 .about_info {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
+
+}
+
+.about_info p:nth-child(2n) {
+  margin-left:92px;
 
 }
 
 
 .about_content {
-  padding: 24px 34px 24px 20px;
+  padding: 24px 21px 24px 21px;
 }
 
 
 .about_info p {
-  width: 44%;
+  width: 43.4%;
   padding: 0;
   margin: 0;
   padding-top: 22px;
-  padding-left: 55px;
+
 }
 
 .about-1, .about-2, .about-3, .about-4  {
@@ -1403,7 +1525,7 @@ div.main-header_logo {
   width: 50px;
   height: 50px;
   position: absolute;
-  left: 0px;
+  left: -58px;
   top: 8px;
 
 
@@ -1492,6 +1614,9 @@ p.subsribe-info {
   margin: auto;
 }
 
+.contacts-map img {
+  display: block;
+}
 
 .contacts-block {
   position: absolute;
@@ -1506,15 +1631,16 @@ p.subsribe-info {
   content:"";
   position: absolute;
 
-  width: 80px;
+  width: 182px;
   height: 140px;
   top: 138px;
   left: 266px;
 
-  background-image: url("../img/pin.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  background-image: url("../img/pin.svg"), url("../img/shadow.png");
+  background-position: 0 0, 35px 30px;
+  background-repeat: no-repeat, no-repeat;
 }
+
 
 .contacts_content {
   padding: 29px 25px 29px 26px;
@@ -1558,6 +1684,7 @@ a.contacts-info {
 
 .main-footer {
   margin-top: 20px;
+  padding-bottom: 20px;
 
 
   display: flex;
@@ -1582,14 +1709,17 @@ a.contacts-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 335px;
+
 
 
 
 }
 
 .footer-menu li {
-  width: 34%;
+width: 49%;
     position: relative;
+
 }
 
 
@@ -1620,6 +1750,7 @@ a.contacts-info {
 .social-button:hover,
 .social-button:focus {
   border: 3px solid rgba(255, 255, 255, 0.7);
+  outline: none;
 }
 
 .social-button path {
@@ -1844,4 +1975,10 @@ form.filter fieldset {
 .pagination-next a {
   padding-left: 14px;
   padding-right: 13px;
+}
+
+
+#map {
+  height: 430px;
+  width:100%;
 }
