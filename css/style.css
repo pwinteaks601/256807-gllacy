@@ -199,8 +199,15 @@ a.site-navigation_current {
   display: block;
 }
 
+.login-link {
+  position: relative;
+}
+
 .modal-login {
   display: none;
+  position: absolute;
+  right: 0;
+  top:30px;
 }
 
 .cart a {
@@ -233,8 +240,15 @@ a.site-navigation_current {
   display: block;
 }
 
+.search {
+  position: relative;
+}
+
 .modal-search {
   display:none;
+  position: absolute;
+  right: 0;
+  top: 30px;
 }
 
 .loupe {
@@ -1105,9 +1119,9 @@ a.footer-menu-item:hover, a.footer-menu-item:active, a.footer-menu-item:focus  {
   background-color: #f8f7f4;
   width: 310px;
   border-radius: 5px;
-  position: absolute;
+  /* position: absolute;
   top: 65px;
-  right: 608px;
+  right: 608px; */
   padding: 20px 15px 20px 15px;
 
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -1156,9 +1170,9 @@ a.footer-menu-item:hover, a.footer-menu-item:active, a.footer-menu-item:focus  {
   background-color: #f8f7f4;
   width: 242px;
   border-radius: 5px;
-  position: absolute;
+  /* position: absolute;
   top: 65px;
-  right: 503px;
+  right: 503px; */
   padding: 20px 19px 20px 17px;
 
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
