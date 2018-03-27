@@ -43,7 +43,6 @@
                 <label for="search-area" class="visually-hidden">Поле поиска</label>
                 <button class="search-button button visually-hidden" type="submit">Отправить</button>
               </form>
-              <button class="modal-close visually-hidden" type="button">Закрыть</button>
             </section>
           </li>
             <li class="login-link" tabindex="0"><a href="#" aria-label="Личный кабинет">
@@ -66,7 +65,6 @@
                 </p>
                 <button class="login-button button" type="submit">Войти</button>
               </form>
-              <button class="modal-close visually-hidden" type="button">Закрыть</button>
               </section>
             </li>
             <li class="cart"><a href="#" aria-label="Корзина">
@@ -137,47 +135,46 @@
           <h2 class="visually-hidden">Хиты</h2>
           <ul class="hits-list">
             <li class="hits-item catalog-item">
-              <div class="item-content">
               <img class="hits-item_img" src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <div class="item-content">
               <p>310<span>/кг</span></p>
               <h3><a class="hits-item_name" href="catalog.html/product-1">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             </div>
-              <!-- <button class="item-button button" type="button">Быстрый просмотр</button> -->
-
               <div class="item-hover">
+                <img class="hover-item_img" src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                 <button class="item-button button" type="button">Быстрый просмотр</button>
               </div>
             </li>
             <li class="hits-item catalog-item">
-              <div class="item-content">
               <img class="hits-item_img" src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-              <p>380<span>/кг</span></p>
-              <h3><a class="hits-item_name" href="catalog.html/product-2">Сливочно-кофейное с кусочками шоколада</a></h3>
-            </div>
-              <!-- <button class="item-button button" type="button">Быстрый просмотр</button> -->
+              <div class="item-content">
+                <p>380<span>/кг</span></p>
+                <h3><a class="hits-item_name" href="catalog.html/product-2">Сливочно-кофейное с кусочками шоколада</a></h3>
+              </div>
               <div class="item-hover">
+                <img class="hover-item_img" src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                 <button class="item-button button" type="button">Быстрый просмотр</button>
               </div>
             </li>
             <li class="hits-item catalog-item">
-              <div class="item-content">
               <img class="hits-item_img" src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              <div class="item-content">
               <p>355<span>/кг</span></p>
               <h3><a class="hits-item_name" href="catalog.html/product-3">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
             </div>
-              <!-- <button class="item-button button" type="button">Быстрый просмотр</button> -->
               <div class="item-hover">
+                <img class="hover-item_img" src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                 <button class="item-button button" type="button">Быстрый просмотр</button>
               </div>
             </li>
             <li class="hits-item catalog-item">
-              <div class="item-content">
               <img class="hits-item_img" src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+              <div class="item-content">
               <p>415<span>/кг</span></p>
               <h3><a class="hits-item_name" href="catalog.html/product-4">Сливочное крем-брюле с карамельной подливкой</a></h3>
             </div>
-              <!-- <button class="item-button button" type="button">Быстрый просмотр</button> -->
               <div class="item-hover">
+                <img class="hover-item_img" src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                 <button class="item-button button" type="button">Быстрый просмотр</button>
               </div>
             </li>
@@ -308,7 +305,7 @@
       </p>
       <button class="feedback-button button" type="submit">Отправить</button>
     </form>
-    <button class="modal-close visually-hidden" type="button">Закрыть</button>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
   <div class=" modal modal-overlay"></div>
 
@@ -319,5 +316,23 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJArJftBcJzPknxQ-EjEAw1Lg9IP5i2TI&callback=initMap"
 type="text/javascript"></script>
 <script src="js/app.js"></script>
+
+<script>
+  var link = document.querySelector(".contacts-button");
+  var popup = document.querySelector(".modal-feedback");
+  var close = document.querySelector(".modal-close");
+
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault ()
+    popup.classList.add("modal-show");
+  });
+
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault ()
+    popup.classList.remove("modal-show");
+  });
+
+
+</script>
   </body>
 </html>
