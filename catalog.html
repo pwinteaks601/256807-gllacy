@@ -91,7 +91,7 @@
                   </li>
                 </ul>
                 <p class="modal-cart_total"><strong>Итого: 750 руб.</strong></p>
-                <button class="cart-button button" href="#">Оформить заказ</button>
+                <button class="cart-button button">Оформить заказ</button>
             </section>
           </li>
         </ul>
@@ -102,9 +102,9 @@
       </div>
     </header>
 
-
     <main>
       <h1 class="visually-hidden">Каталог Gllacy Shop</h1>
+
       <ul class="container breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li>»</li>
@@ -112,29 +112,31 @@
         <li>»</li>
         <li class="breadcrumbs_current">Сливочное</li>
       </ul>
+
       <h2 class="page-title container">Сливочное мороженое</h2>
+
       <section class="container filters">
         <h2 class="visually-hidden">Фильтры товаров</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+
           <fieldset>
             <legend>Сортировка:</legend>
-            <select class="filter-input filter_sort" id="filter-sort" name="sort">
-              <option value="popular-first">по популярности</option>
-              <option value="cheap-first">сначала недорогие</option>
-              <option value="expensive-first">сначала дорогие</option>
-              <option value="fat-first">по жирности</option>
-            </select>
+            <div class="sort">
+              <select class="filter-input filter_sort" id="filter-sort" name="sort">
+                <option value="popular-first">по популярности</option>
+                <option value="cheap-first">сначала недорогие</option>
+                <option value="expensive-first">сначала дорогие</option>
+                <option value="fat-first">по жирности</option>
+              </select>
+            </div>
           </fieldset>
+
           <fieldset>
             <legend class="price-legend">Цена:</legend>
             <div class="price-controls">
-              <label class="min-price"><input name="min-price" type="text" value="100 руб."></label>
-              <label class="max-price">-<input name="max-price" type="text" value="500 руб."></label>
+              <label class="min-price"><input name="min-price" type="text" value="100"></label>
+              <label class="max-price">-<input name="max-price" type="text" value="500"></label>
             </div>
-
-            <!-- <input class="filter-input filter_price" id="filter-price" name="price" type="range" min="0" max="800" step="100">
-            <label for="filter-price" class="visually-hidden">Ценовой диапазон</label> -->
-
           <div class="range-filter">
             <div class="range-controls">
               <div class="scale">
@@ -144,10 +146,8 @@
               <div class="toggle toggle-max"></div>
             </div>
           </div>
-
-
-
           </fieldset>
+
           <fieldset>
             <legend>Жирность:</legend>
             <ul class="filter-input filter_fat">
@@ -169,6 +169,7 @@
               </li>
             </ul>
           </fieldset>
+
           <fieldset>
             <legend>Наполнители:</legend>
             <ul class="filter-input filter_topping">
@@ -194,9 +195,11 @@
               </li>
             </ul>
           </fieldset>
+
           <button type="submit" class="filter-button button">Применить</button>
         </form>
       </section>
+
       <section class="container catalog">
         <h2 class="visually-hidden">Список сливочного мороженого</h2>
         <ul class="catalog-list">
@@ -244,7 +247,6 @@
               <button class="item-button button" type="button">Быстрый просмотр</button>
             </div>
           </li>
-
           <li class="catalog-item">
             <img class="catalog-item_img" src="img/product-5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
             <div class="item-content">
@@ -289,7 +291,6 @@
               <button class="item-button button" type="button">Быстрый просмотр</button>
             </div>
           </li>
-
           <li class="catalog-item">
             <img class="catalog-item_img" src="img/product-9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
             <div class="item-content">
@@ -336,6 +337,7 @@
           </li>
         </ul>
       </section>
+
       <nav class="container pagination">
         <h2 class="visually-hidden">Страницы каталога</h2>
         <ul class="pagination-list">
@@ -360,10 +362,10 @@
         </ul>
       </nav>
     </main>
+
     <footer class="container">
       <div class="main-footer">
         <ul class="footer-social">
-
             <li><a class="social-button" href="#"><span class="visually-hidden">Твиттер</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                 <path fill="#FFF" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/>
@@ -387,7 +389,6 @@
                 <path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm6.602 20.531a3.73 3.73 0 0 1-1.124 1.327c-.552.415-1.161.71-1.823.886s-1.501.264-2.519.264h-6.121V8.987h5.443c1.13 0 1.957.038 2.48.113a5.126 5.126 0 0 1 1.561.5c.533.27.929.632 1.189 1.087.26.455.392.975.392 1.558 0 .678-.179 1.278-.536 1.795-.358.518-.863.92-1.517 1.208v.075c.917.182 1.642.559 2.179 1.13.537.571.807 1.325.807 2.261 0 .678-.138 1.283-.411 1.817z"/></g>
               </svg>
             </a></li>
-
         </ul>
         <ul class="footer-menu">
             <li><a class="footer-menu-item footer-suppliers" href="#">Для поставщиков</a></li>
@@ -396,14 +397,12 @@
             <li><a class="footer-menu-item" href="#">Экологические стандарты</a></li>
         </ul>
         <div class="footer-copyright">
-
             <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
             <p>
               Сделано в
               <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
               © 2017
             </p>
-
         </div>
       </div>
     </footer>
