@@ -842,10 +842,10 @@ form.filter fieldset {
 .filter-input_radio + label::before {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   left: -33px;
-  top: -3px;
+  top: -4px;
 
   background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
@@ -853,13 +853,13 @@ form.filter fieldset {
   opacity: 0.8;
 }
 
-.filter-input_radio:checked + label::after {
+.filter-input_radio:checked + label::before {
   content: "";
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   left: -33px;
-  top: -3px;
+  top: -4px;
 
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
@@ -867,19 +867,11 @@ form.filter fieldset {
   opacity: 0.8;
 }
 
-.filter-input_radio + label:hover::before  {
+.filter-input_radio + label:hover::before, .filter-input_radio + label:focus::before {
   opacity: 1;
 }
 
-.filter-input_radio:checked + label:hover::after {
-  opacity: 1;
-}
-
-.filter-input_radio + label:disabled::before,  {
-  opacity: 0.4;
-}
-
-.filter-input_radio:checked + label:disabled::after {
+.filter-input_radio + label:disabled::before {
   opacity: 0.4;
 }
 
@@ -897,7 +889,7 @@ form.filter fieldset {
   opacity: 0.8;
 }
 
-.filter-input_checkbox:checked + label::after {
+.filter-input_checkbox:checked + label::before {
   content: "";
   position: absolute;
   width: 27px;
@@ -911,19 +903,11 @@ form.filter fieldset {
   opacity: 0.8;
 }
 
-.filter-input_checkbox + label:hover::before {
-  opacity: 1;
-}
-
-.filter-input_checkbox:checked + label:hover::after {
+.filter-input_checkbox + label:hover::before, .filter-input_checkbox + label:focus::before {
   opacity: 1;
 }
 
 .filter-input_checkbox + label:disabled::before {
-  opacity: 0.4;
-}
-
-.filter-input_checkbox:checked + label:disabled::after {
   opacity: 0.4;
 }
 
@@ -1177,7 +1161,7 @@ label.max-price {
   cursor: pointer;
 }
 
-.slider-controls label:hover {
+.slider-controls label:hover, .slider-controls label:focus {
   background-color: rgba(248,247,244, 0.4);
 
 }
@@ -1662,7 +1646,6 @@ a.news_link:hover, a.news_link:active, a.news_link:focus {
 
 /* Контакты */
 .contacts {
-  position: relative;
   width: 100%;
   margin: auto;
 }
@@ -1713,6 +1696,8 @@ a.news_link:hover, a.news_link:active, a.news_link:focus {
   background-image: url("../img/pin.svg"), url("../img/shadow.png");
   background-position: 0 0, 35px 30px;
   background-repeat: no-repeat, no-repeat;
+
+  z-index: 6;
 }
 
 .contacts_content {
@@ -1797,11 +1782,6 @@ a.contacts-info {
   right: 223px;
 }
 
-.pagination-next a {
-  padding-left: 14px;
-  padding-right: 13px;
-}
-
 ul.pagination-list {
   list-style: none;
   display: flex;
@@ -1809,7 +1789,7 @@ ul.pagination-list {
   margin: 0;
   padding: 0;
   padding-bottom: 34px;
-  padding-right: 4px;
+  margin-right: -4px;
 }
 
 .pagination-item a {
@@ -1841,6 +1821,12 @@ ul.pagination-list {
 
   background-color: #ffffff;
 }
+
+.pagination-next a {
+  padding-left: 14px;
+  padding-right: 13px;
+}
+
 
 .pagination-next a:active .arrow-next path {
   fill: #323232;
